@@ -31,9 +31,40 @@
 //-------------------------------------------------------------------------------
 -(void)initController {
    //Initialize arrays
-    maNames         = [[NSMutableArray alloc] initWithObjects: @"Bart Simpson", @"Lisa Simpson", @"Homer Simpson", @"Marge Simpson", @"Maggie Simpson", nil];
-    maAges          = [[NSMutableArray alloc] initWithObjects: @"10", @"8", @"40", @"38", @"1", nil];
-    maImgs          = [[NSMutableArray alloc] initWithObjects: @"bart.png", @"lisa.png", @"homer.png", @"marge.png", @"maggie.png", nil];
+    maNames         = [[NSMutableArray alloc] initWithObjects:
+                       @"Daenerys Targaryen",
+                       @"Jon Snow",
+                       @"Tyrion Lannister",
+                       @"Joffrey Baratheon",
+                       @"Khal Drogo",
+                       nil];
+    maAges          = [[NSMutableArray alloc] initWithObjects:
+                       @"17",
+                       @"18",
+                       @"35",
+                       @"14",
+                       @"25",
+                       nil];
+    maImgs          = [[NSMutableArray alloc] initWithObjects:
+                       @"dany.jpg",
+                       @"jonsnow.jpeg",
+                       @"joffrey.png",
+                       @"tyrion.png",
+                       @"drogo.png",
+                       nil];
+    maAliases       = [[NSMutableArray alloc] initWithObjects:
+                       @"Dany",
+                       @"You know Nothing",
+                       @"Small",
+                       @"Puppet King",
+                       @"Drogo",
+                       nil];
+    maDescriptions = [[NSMutableArray alloc] initWithObjects:
+                      @"Daenerys is the only daughter and youngest child of King Aerys II Targaryen, the Mad King, and his sister-wife Rhaella.",
+                      @"Jon is the bastard son of Lord Eddard Stark of Winterfell, the head of House Stark and Lord Paramount of the North.", @"He is a dwarf, causing him probems and persecution. His size has led him to being referred to derisively by various names, such as the Imp and The Halfman. This is mitigated by his intellect and his family's wealth and power. ",
+                      @"Joffrey is believed to be the oldest son and heir of King Robert Baratheon and Queen Cersei Lannister, both of whom entered into a political marriage alliance after Robert took the throne by force from the Mad King Aerys II Targaryen. In reality, his father is Jaime Lannister, the queen's brother and the Lord Commander of the Kingsguard.",
+                      @"Drogo is a powerful warlord and feared warrior. He marries Daenerys Targaryen and subsequently grows to love her. He promises to retake the Seven Kingdoms for her after she survives an assassination attempt. ",
+                      nil];
 }
 /**********************************************************************************************/
 #pragma mark - Table source and delegate methods
@@ -65,6 +96,7 @@
     //Fill cell with info from arrays
     cell.lblName.text   = maNames[indexPath.row];
     cell.lblAge.text    = maAges[indexPath.row];
+    cell.lblAlias.text  = maAliases[indexPath.row];
     cell.imgUser.image  = [UIImage imageNamed:maImgs[indexPath.row]];
     
     return cell;
