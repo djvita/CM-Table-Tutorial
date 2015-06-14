@@ -48,8 +48,8 @@
     maImgs          = [[NSMutableArray alloc] initWithObjects:
                        @"dany.jpg",
                        @"jonsnow.jpeg",
-                       @"joffrey.png",
                        @"tyrion.png",
+                       @"joffrey.png",
                        @"drogo.png",
                        nil];
     maAliases       = [[NSMutableArray alloc] initWithObjects:
