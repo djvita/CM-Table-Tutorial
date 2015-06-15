@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="oU7-LL-0R5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--Start-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="Start" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="vXZ-lx-hvc" customClass="Start" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -27,67 +27,81 @@
                                 <state key="normal" title="Add New Character">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="n25-U7-5Xb" kind="push" identifier="AddCharacter" id="rWv-cS-KXM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="2TO-Mp-cAq"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="233"/>
+            <point key="canvasLocation" x="663" y="233"/>
         </scene>
-        <!--View Controller-->
+        <!--AddCharacter-->
         <scene sceneID="yeh-hx-Co2">
             <objects>
-                <viewController id="n25-U7-5Xb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddCharacter" title="AddCharacter" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n25-U7-5Xb" customClass="AddCharacter" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RgJ-Vk-bY4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Age" borderStyle="roundedRect" minimumFontSize="17" id="6Ci-ZX-o9z">
-                                <rect key="frame" x="36" y="212" width="97" height="30"/>
+                                <rect key="frame" x="36" y="339" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a Description" id="Eih-kY-j1o">
-                                <rect key="frame" x="29" y="271" width="240" height="128"/>
+                                <rect key="frame" x="35" y="236" width="240" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Name" borderStyle="roundedRect" minimumFontSize="17" id="HFQ-oo-wzN">
+                                <rect key="frame" x="35" y="127" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Alias" borderStyle="roundedRect" minimumFontSize="17" id="lnV-qF-N4y">
-                                <rect key="frame" x="36" y="136" width="97" height="30"/>
+                                <rect key="frame" x="35" y="188" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="erI-HJ-9hQ">
-                                <rect key="frame" x="35" y="0.0" width="35" height="30"/>
+                                <rect key="frame" x="35" y="89" width="35" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Back">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnBack:" destination="n25-U7-5Xb" eventType="touchUpInside" id="HZO-ZP-4Ut"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Name" borderStyle="roundedRect" minimumFontSize="17" id="HFQ-oo-wzN">
-                                <rect key="frame" x="36" y="55" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HgP-aJ-jid"/>
+                    <connections>
+                        <outlet property="txtFAge" destination="6Ci-ZX-o9z" id="OFk-Ux-jFN"/>
+                        <outlet property="txtFAlias" destination="lnV-qF-N4y" id="O47-le-fWn"/>
+                        <outlet property="txtFName" destination="HFQ-oo-wzN" id="phF-yD-ybg"/>
+                        <outlet property="txtVDesc" destination="Eih-kY-j1o" id="hKK-Vu-yWU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wt4-78-dPP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="-384"/>
+            <point key="canvasLocation" x="1081" y="-347"/>
         </scene>
-        <!--Character Details-->
+        <!--CharacterDetails-->
         <scene sceneID="pBW-Ka-Ktq">
             <objects>
-                <viewController storyboardIdentifier="CharacterDetails" id="Ik1-I3-9R9" customClass="CharacterDetails" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CharacterDetails" title="CharacterDetails" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ik1-I3-9R9" customClass="CharacterDetails" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Hv-DD-QGQ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -132,7 +146,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GxS-Vn-pcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="549" y="233"/>
+            <point key="canvasLocation" x="1081" y="233"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4Lj-Gz-ZRo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="oU7-LL-0R5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="820-SD-KvL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="Lba-gA-DxK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NDS-pc-aUE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131" y="233"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

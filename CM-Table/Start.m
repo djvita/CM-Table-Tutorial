@@ -3,6 +3,7 @@
 //  CM-Table
 //
 //  Created by Walter Gonzalez Domenzain on 13/06/15.
+//  Modified by Vita V
 //  Copyright (c) 2015 Smartplace. All rights reserved.
 //
 
@@ -99,6 +100,7 @@
     cell.lblAlias.text  = maAliases[indexPath.row];
     cell.imgUser.image  = [UIImage imageNamed:maImgs[indexPath.row]];
     cell.clipsToBounds  = YES;
+    //[cell.contentView.superview setClipsToBounds:YES];
     return cell;
 }
 //-------------------------------------------------------------------------------
