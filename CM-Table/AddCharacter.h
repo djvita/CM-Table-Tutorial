@@ -9,7 +9,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddCharacter : UIViewController
+@interface AddCharacter : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate >
 
 @property (strong, nonatomic) IBOutlet UITextField *txtFName;
 @property (strong, nonatomic) IBOutlet UITextField *txtFAlias;
