@@ -10,6 +10,7 @@
 #import "Start.h"
 #import "cellGoT.h"
 #import "CharacterDetails.h"
+#import "AddCharacter.h"
 #import "Declarations.h"
 
 @interface Start ()

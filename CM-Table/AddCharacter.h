@@ -15,7 +15,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtFAge;
 @property (strong, nonatomic) IBOutlet UITextView *txtVDesc;
 
+- (IBAction)btnAddImagePressed:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnSavePressed;
 
 
 @end
