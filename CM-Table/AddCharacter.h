@@ -15,7 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtFAge;
 @property (strong, nonatomic) IBOutlet UITextView *txtVDesc;
 
-- (IBAction)btnBack:(id)sender;
+
 
 
 @end

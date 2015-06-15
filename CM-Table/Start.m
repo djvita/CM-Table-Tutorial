@@ -88,11 +88,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Initialize cells
-    cellGoT *cell = (cellGoT *)[tableView dequeueReusableCellWithIdentifier:@"cellSimpsons"];
+    cellGoT *cell = (cellGoT *)[tableView dequeueReusableCellWithIdentifier:@"cellGoT"];
     
     if (cell == nil) {
-        [tableView registerNib:[UINib nibWithNibName:@"cellSimpsons" bundle:nil] forCellReuseIdentifier:@"cellSimpsons"];
-        cell = [tableView dequeueReusableCellWithIdentifier:@"cellSimpsons"];
+        [tableView registerNib:[UINib nibWithNibName:@"cellGoT" bundle:nil] forCellReuseIdentifier:@"cellGoT"];
+        cell = [tableView dequeueReusableCellWithIdentifier:@"cellGoT"];
     }
     //Fill cell with info from arrays
     cell.lblName.text   = maNames[indexPath.row];
