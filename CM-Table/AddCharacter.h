@@ -10,6 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AddCharacter : UIViewController
+
 @property (strong, nonatomic) IBOutlet UITextField *txtFName;
 @property (strong, nonatomic) IBOutlet UITextField *txtFAlias;
 @property (strong, nonatomic) IBOutlet UITextField *txtFAge;
@@ -17,7 +18,6 @@
 
 - (IBAction)btnAddImagePressed:(id)sender;
 
-@property (weak, nonatomic) IBOutlet UIButton *btnSavePressed;
-
+- (IBAction)btnSavePressed:(id)sender;
 
 @end

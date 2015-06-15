@@ -28,4 +28,7 @@
 
 - (IBAction)btnAddImagePressed:(id)sender {
 }
+
+- (IBAction)btnSavePressed:(id)sender {
+}
 @end
