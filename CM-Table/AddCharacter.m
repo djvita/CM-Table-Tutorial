@@ -20,7 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //[self initController];
+    if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        
+        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                              message:@"Device has no camera"
+                                                             delegate:nil
+                                                    cancelButtonTitle:@"OK"
+                                                    otherButtonTitles: nil];
+        
+        [myAlertView show];
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,72 +39,26 @@
 }
 
 - (IBAction)btnAddImagePressed:(id)sender {
-    [self startMediaBrowserFromViewController: self
-                                usingDelegate: self];
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+
     
 }
-- (BOOL) startMediaBrowserFromViewController: (UIViewController*) controller
-                               usingDelegate: (id <UIImagePickerControllerDelegate,
-                                               UINavigationControllerDelegate>) delegate {
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
     
-    if (([UIImagePickerController isSourceTypeAvailable:
-          UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)
-        || (delegate == nil)
-        || (controller == nil))
-        return NO;
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.imageView.image = chosenImage;
     
-    UIImagePickerController *mediaUI = [[UIImagePickerController alloc] init];
-    mediaUI.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
+    [picker dismissViewControllerAnimated:YES completion:NULL];
     
-    // Displays saved pictures and movies, if both are available, from the
-    // Camera Roll album.
-    mediaUI.mediaTypes =
-    [UIImagePickerController availableMediaTypesForSourceType:
-     UIImagePickerControllerSourceTypeSavedPhotosAlbum];
-    
-    // Hides the controls for moving & scaling pictures, or for
-    // trimming movies. To instead show the controls, use YES.
-    mediaUI.allowsEditing = YES;
-    
-    mediaUI.delegate = delegate;
-    
-    [controller presentModalViewController: mediaUI animated: YES];
-    return YES;
 }
-- (void) imagePickerController: (UIImagePickerController *) picker
- didFinishPickingMediaWithInfo: (NSDictionary *) info {
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
-    NSString *mediaType = [info objectForKey: UIImagePickerControllerMediaType];
-    UIImage *originalImage, *editedImage, *imageToUse;
-    
-    // Handle a still image picked from a photo album
-    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeImage, 0)
-        == kCFCompareEqualTo) {
-        
-        editedImage = (UIImage *) [info objectForKey:
-                                   UIImagePickerControllerEditedImage];
-        originalImage = (UIImage *) [info objectForKey:
-                                     UIImagePickerControllerOriginalImage];
-        
-        if (editedImage) {
-            imageToUse = editedImage;
-        } else {
-            imageToUse = originalImage;
-        }
-        // Do something with imageToUse
-    }
-    
-    // Handle a movied picked from a photo album
-    if (CFStringCompare ((CFStringRef) mediaType, kUTTypeMovie, 0)
-        == kCFCompareEqualTo) {
-        
-        NSString *moviePath = [[info objectForKey:
-                                UIImagePickerControllerMediaURL] path];
-        
-        // Do something with the picked movie available at moviePath
-    }
-    
-    [[picker parentViewController] dismissModalViewControllerAnimated: YES];
+    [picker dismissViewControllerAnimated:YES completion:NULL];
     
 }
 

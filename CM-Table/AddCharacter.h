@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *txtFAlias;
 @property (strong, nonatomic) IBOutlet UITextField *txtFAge;
 @property (strong, nonatomic) IBOutlet UITextView *txtVDesc;
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
 - (IBAction)btnAddImagePressed:(id)sender;
 

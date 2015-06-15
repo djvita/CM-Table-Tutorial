@@ -93,11 +93,16 @@
                                     <action selector="btnSavePressed:" destination="n25-U7-5Xb" eventType="touchUpInside" id="Nag-YK-0Ko"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="uSq-5Y-7Ib">
+                                <rect key="frame" x="179" y="297" width="120" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="HgP-aJ-jid"/>
                     <connections>
+                        <outlet property="imageView" destination="uSq-5Y-7Ib" id="CYX-Wb-tY7"/>
                         <outlet property="txtFAge" destination="6Ci-ZX-o9z" id="OFk-Ux-jFN"/>
                         <outlet property="txtFAlias" destination="lnV-qF-N4y" id="O47-le-fWn"/>
                         <outlet property="txtFName" destination="HFQ-oo-wzN" id="phF-yD-ybg"/>
