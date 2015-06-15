@@ -7,7 +7,7 @@
 //
 
 #import "Start.h"
-#import "cellSimpsons.h"
+#import "cellGoT.h"
 #import "CharacterDetails.h"
 #import "Declarations.h"
 
@@ -87,7 +87,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     //Initialize cells
-    cellSimpsons *cell = (cellSimpsons *)[tableView dequeueReusableCellWithIdentifier:@"cellSimpsons"];
+    cellGoT *cell = (cellGoT *)[tableView dequeueReusableCellWithIdentifier:@"cellSimpsons"];
     
     if (cell == nil) {
         [tableView registerNib:[UINib nibWithNibName:@"cellSimpsons" bundle:nil] forCellReuseIdentifier:@"cellSimpsons"];
@@ -98,7 +98,7 @@
     cell.lblAge.text    = maAges[indexPath.row];
     cell.lblAlias.text  = maAliases[indexPath.row];
     cell.imgUser.image  = [UIImage imageNamed:maImgs[indexPath.row]];
-    
+    cell.clipsToBounds  = YES;
     return cell;
 }
 //-------------------------------------------------------------------------------

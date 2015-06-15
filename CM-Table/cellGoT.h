@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface cellSimpsons : UITableViewCell
+@interface cellGoT : UITableViewCell
 
 //Images
 @property (strong, nonatomic) IBOutlet UIImageView *imgUser;

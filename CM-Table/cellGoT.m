@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Smartplace. All rights reserved.
 //
 
-#import "cellSimpsons.h"
+#import "cellGoT.h"
 
-@implementation cellSimpsons
+@implementation cellGoT
 
 - (void)awakeFromNib {
     // Initialization code
