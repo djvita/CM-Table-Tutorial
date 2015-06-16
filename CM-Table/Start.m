@@ -106,7 +106,7 @@
     cell.lblAlias.text  = maAliases[indexPath.row];
     cell.imgUser.image  = [UIImage imageNamed:maImgs[indexPath.row]];
     cell.clipsToBounds  = YES;
-    //[cell.contentView.superview setClipsToBounds:YES];
+    [cell.contentView.superview setClipsToBounds:YES];
     return cell;
 }
 //-------------------------------------------------------------------------------
@@ -116,10 +116,15 @@
     CharacterDetails *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CharacterDetails"];
     
     [self presentViewController:viewController animated:YES completion:nil];
+    
+    AddCharacter *addChar= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AddCharacter"];
+    
+    [self presentViewController:addChar animated:YES completion:nil];
+    
 
 }
 
-
+	
 
 
 
