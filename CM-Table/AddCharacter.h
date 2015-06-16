@@ -17,6 +17,16 @@
 @property (strong, nonatomic) IBOutlet UITextView *txtVDesc;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 
+
+
+//hopefully temporary
+@property (strong, nonatomic) IBOutlet UILabel *labelName;
+@property (strong, nonatomic) IBOutlet UILabel *labelAlias;
+@property (strong, nonatomic) IBOutlet UILabel *labelAge;
+@property (strong, nonatomic) IBOutlet UILabel *lablDesc;
+
+
+
 - (IBAction)btnAddImagePressed:(id)sender;
 
 - (IBAction)btnSavePressed:(id)sender;
