@@ -24,6 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initController];
+    //background image
+    UIImage *backgroundImage = [UIImage imageNamed:@"wallpaper.jpg"];
+    UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
+    backgroundImageView.image=backgroundImage;
+    [self.view insertSubview:backgroundImageView atIndex:0];
 }
 //-------------------------------------------------------------------------------
 - (void)didReceiveMemoryWarning {
