@@ -36,6 +36,7 @@
 - (void)initController {
     self.lblName.text   = maNames[miCharacterIndex];
     self.imgUser.image  = [UIImage imageNamed:maImgs[miCharacterIndex]];
+    self.lblDescription.text = maDescriptions[miCharacterIndex];
 }
 /**********************************************************************************************/
 #pragma mark - Buttons methods
