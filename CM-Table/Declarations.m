@@ -16,6 +16,11 @@ NSMutableArray *maImgs;
 NSMutableArray *maAliases;
 NSMutableArray *maDescriptions;
 
+NSString *sName;
+NSString *sAlias;
+NSString *sAge;
+NSString *sDesc;
+
 @implementation Declarations
 
 @end
