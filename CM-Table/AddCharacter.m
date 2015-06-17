@@ -135,10 +135,13 @@
     sAlias  = _txtFAlias.text;
     sAge    = _txtFAge.text;
     sDesc   = _txtVDesc.text;
-    [maImgs addObject:_imageView.image];
+    if (_imageView.image != nil){
+        [maImgs addObject:_imageView.image];
+    }
     [maNames addObject:sName];
     [maAliases addObject:sAlias];
     [maAges addObject:sAge];
     [maDescriptions addObject:sDesc];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

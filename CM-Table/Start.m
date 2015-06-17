@@ -120,7 +120,7 @@
     AddCharacter *addChar= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AddCharacter"];
     ;
 
-    
+    [tableView reloadData];
     [self presentViewController:addChar animated:YES completion:nil];
 
     
