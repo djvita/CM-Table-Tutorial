@@ -126,10 +126,14 @@
     [_txtFAlias resignFirstResponder];
     [_txtFAge resignFirstResponder];
     [_txtVDesc resignFirstResponder];
-    _labelName.text   = _txtFName.text;
-    _labelAlias.text  = _txtFAlias.text;
-    _labelAge.text    = _txtFAge.text;
-    _lablDesc.text    = _txtVDesc.text;
-    
+    //_labelName.text   = _txtFName.text;
+    //_labelAlias.text  = _txtFAlias.text;
+    //_labelAge.text    = _txtFAge.text;
+    //_lablDesc.text    = _txtVDesc.text;
+    //extern variables
+    sName   = _txtFName.text;
+    sAlias  = _txtFAlias.text;
+    sAge    = _txtFAge.text;
+    sDesc   = _txtVDesc.text;
 }
 @end

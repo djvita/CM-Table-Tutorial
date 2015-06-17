@@ -118,10 +118,15 @@
     [self presentViewController:viewController animated:YES completion:nil];
     
     AddCharacter *addChar= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AddCharacter"];
+    ;
+    [maNames addObject:sName];
+    [maAliases addObject:sAlias];
+    [maAges addObject:sAge];
+    [maDescriptions addObject:sDesc];
     
     [self presentViewController:addChar animated:YES completion:nil];
-    
 
+    
 }
 
 	
