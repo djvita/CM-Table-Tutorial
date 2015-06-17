@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initController];
+
+    
     //background image
     UIImage *backgroundImage = [UIImage imageNamed:@"wallpaper.jpg"];
     UIImageView *backgroundImageView=[[UIImageView alloc]initWithFrame:self.view.frame];
@@ -116,11 +118,43 @@
     CharacterDetails *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CharacterDetails"];
     
     [self presentViewController:viewController animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"saveCharacter" sender:indexPath];
+    
 
 }
 
+//segue
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    // unwrap the controller if it's embedded in the nav controller.
+    UIViewController *controller;
+    UIViewController *destVC = segue.destinationViewController;
+    if ([destVC isKindOfClass:[UINavigationController class]])
+    {
+        UINavigationController *navController = (UINavigationController *)destVC;
+        controller = [navController.viewControllers firstObject];
+    }
+    else
+    {
+        controller = destVC;
+    }
+    
+    if ([controller isKindOfClass:[AddCharacter class]])
+    {
+        AddCharacter *vc = (AddCharacter *)controller;
+        NSString *itemToPassBack =
+        [self.delegate addItemViewController:self didFinishEnteringItem:itemToPassBack];
+        NSIndexPath *ip = [self.tableView indexPathForSelectedRow];
+        [vc setDataString:[[self miCharacterIndex] objectAtIndex:ip.row]];
+        
+        
+    }
+    else
+    {
+        NSAssert(NO, @"Unknown segue. All segues must be handled.");
+    }
 
-
+}
 
 
 

@@ -9,7 +9,19 @@
 
 #import <UIKit/UIKit.h>
 
+//protocol
+@class Start;
+
+@protocol StartDelegate <NSObject>
+- (void)addItemViewController:(Start *)controller didFinishEnteringItem:(NSString *)item;
+@end
+
+
+
+
 @interface Start : UIViewController<UITableViewDataSource, UITableViewDelegate>
+
+@property (nonatomic, weak) id <StartDelegate> delegate;
 
 
 @end

@@ -15,6 +15,10 @@ extern NSMutableArray *maAges;
 extern NSMutableArray *maImgs;
 extern NSMutableArray *maAliases;
 extern NSMutableArray *maDescriptions;
+extern NSString *sName;
+extern NSString *sAlias;
+extern NSString *sAge;
+extern NSString *sDesc;
 
 @interface Declarations : NSObject
 

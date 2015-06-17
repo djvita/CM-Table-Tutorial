@@ -9,7 +9,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddCharacter : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate >
+@interface AddCharacter : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPageViewControllerDelegate >
+
 
 @property (strong, nonatomic) IBOutlet UITextField *txtFName;
 @property (strong, nonatomic) IBOutlet UITextField *txtFAlias;
@@ -25,6 +26,12 @@
 @property (strong, nonatomic) IBOutlet UILabel *labelAge;
 @property (strong, nonatomic) IBOutlet UILabel *lablDesc;
 
+
+//strings to pass
+@property(nonatomic) NSString *sName;
+@property(nonatomic) NSString *sAlias;
+@property(nonatomic) NSString *sAge;
+@property(nonatomic) NSString *sDesc;
 
 
 - (IBAction)btnAddImagePressed:(id)sender;

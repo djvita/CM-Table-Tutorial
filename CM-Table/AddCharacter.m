@@ -10,7 +10,7 @@
 #import "AddCharacter.h"
 #import "Declarations.h"
 #import <MobileCoreServices/MobileCoreServices.h>
-
+#import "Start.h"
 
 @interface AddCharacter ()
 
@@ -117,6 +117,11 @@
     
 }
 
+- (void)addItemViewController:(AddCharacter *)controller didFinishEnteringItem:(NSString *)item
+{
+    NSLog(@"This was returned from ViewControllerB %@",item);
+}
+
 
 
 - (IBAction)btnSavePressed:(id)sender {
@@ -133,3 +138,10 @@
     
 }
 @end
+
+
+
+
+
+
+

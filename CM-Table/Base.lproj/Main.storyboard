@@ -139,7 +139,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="push" id="u72-QH-Rnp"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="saveCharacter" splitViewControllerTargetIndex="1" id="u72-QH-Rnp"/>
                                 </connections>
                             </button>
                         </subviews>
