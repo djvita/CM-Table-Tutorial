@@ -135,6 +135,7 @@
     sAlias  = _txtFAlias.text;
     sAge    = _txtFAge.text;
     sDesc   = _txtVDesc.text;
+    [maImgs addObject:_imageView.image];
     [maNames addObject:sName];
     [maAliases addObject:sAlias];
     [maAges addObject:sAge];
