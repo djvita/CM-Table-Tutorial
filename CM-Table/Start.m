@@ -116,16 +116,26 @@
     CharacterDetails *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"CharacterDetails"];
     
     [self presentViewController:viewController animated:YES completion:nil];
-    
     AddCharacter *addChar= [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"AddCharacter"];
-    ;
-
-    [tableView reloadData];
+    
+    
+    //[tableView reloadData];
     [self presentViewController:addChar animated:YES completion:nil];
+    //cell.lblName.text   = maNames[indexPath.row];
+    //cell.lblAge.text    = maAges[indexPath.row];
+    //cell.lblAlias.text  = maAliases[indexPath.row];
+    //cell.imgUser.image  = [UIImage imageNamed:maImgs[indexPath.row]];
+    //cell.clipsToBounds  = YES;
+    //[cell.contentView.superview setClipsToBounds:YES];
 
     
 }
 
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+
+
+}
 	
 
 
